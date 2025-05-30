@@ -6,9 +6,7 @@ stock_prices = {
     "AMZN": 120,
     "MSFT": 310
 }
-
 a_port = {}
-
 print("Enter your stock portfolio:")
 while True:
     stock = input("Enter stock symbol (or 'done' to finish): ").upper()
@@ -23,7 +21,6 @@ while True:
         print("Invalid quantity. Please enter a number.")
         continue
     a_port[stock] = a_port.get(stock, 0) + quantity
-
 total_value = 0
 print("\nYour Portfolio:")
 for stock, quantity in a_port.items():
@@ -31,9 +28,7 @@ for stock, quantity in a_port.items():
     value = price * quantity
     total_value += value
     print(f"{stock} - Qty: {quantity}, Price: ${price}, Value: ${value}")
-
 print(f"\nTotal Investment Value: ${total_value}")
-
 save = input("\nDo you want to save the portfolio to a file? (yes/no): ").lower()
 if save == 'yes':
     filename = input("Enter filename (with .txt or .csv): ")
